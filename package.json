@@ -1,0 +1,22 @@
+{
+  "name": "sociomata-backend",
+  "version": "1.0.0",
+  "description": "Sociomata internal API server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/btofficiel/sociomata-backend.git"
+  },
+  "author": "Bhaskar Thakur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/btofficiel/sociomata-backend/issues"
+  },
+  "homepage": "https://github.com/btofficiel/sociomata-backend#readme",
+  "dependencies": {
+    "@hapi/hapi": "^20.0.3"
+  }
+}

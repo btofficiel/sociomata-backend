@@ -1,0 +1,96 @@
+{"timestamp":"2020-12-19T11:58:47.649Z","pid":16626,"level":"error","message":"Hello"}
+{"timestamp":"2020-12-19T11:58:52.128Z","pid":16638,"level":"error","message":"Hello"}
+{"timestamp":"2020-12-19T12:05:45.554Z","pid":16870,"level":"error","message":"Hello"}
+{"email":"bhaskar@example.com","password":"password","level":"info","message":"Response"}
+{"email":"bhaskar@example.com","password":"password","level":"info","message":"Response"}
+{"level":"info","message":"Response"}
+{"timestamp":"2020-12-21T13:08:21.998Z","pid":3014,"level":"error","message":"Hello"}
+{"timestamp":"2020-12-21T13:08:39.488Z","pid":3032,"level":"error","message":"Hello"}
+{"timestamp":"2020-12-21T13:08:42.361Z","pid":3059,"level":"error","message":"Hello"}
+{"timestamp":"2020-12-21T13:10:48.375Z","pid":3194,"level":"error","message":"Hello"}
+{"timestamp":"2020-12-21T13:11:12.460Z","pid":3208,"level":"error","message":"Hello"}
+{"timestamp":"2020-12-21T13:11:30.005Z","pid":3239,"level":"error","message":"Hello"}
+{"timestamp":"2020-12-22T06:32:44.181Z","pid":5603,"level":"error","message":"Hello"}
+{"timestamp":"2020-12-22T06:34:14.549Z","pid":5648,"level":"error","message":"Hello World"}
+{"timestamp":"2020-12-22T06:53:28.637Z","pid":6317,"level":"error","message":"Hello World"}
+{"timestamp":"2020-12-22T06:53:51.398Z","pid":6331,"level":"error","message":"Hello World"}
+{"timestamp":"2020-12-22T06:55:55.433Z","pid":6415,"level":"error","message":"Hello World"}
+{"timestamp":"2020-12-22T06:57:59.485Z","pid":6448,"level":"error","message":"Hello World"}
+{"timestamp":"2020-12-22T06:58:15.335Z","pid":6462,"level":"error","message":"Hello World"}
+{"timestamp":"2020-12-22T06:58:50.749Z","pid":6480,"level":"error","message":"Hello World"}
+{"timestamp":"2020-12-22T06:59:25.675Z","pid":6499,"level":"error","message":"Hello World"}
+{"timestamp":"2020-12-22T06:59:41.293Z","pid":6514,"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:00:18.075Z","reason":{},"promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:01:09.695Z","reason":{},"promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:01:56.803Z","reason":{},"promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:03:22.714Z","reason":{},"promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:03:56.441Z","reason":{},"promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:04:54.918Z","reason":{},"promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:05:22.414Z","reason":{},"promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:06:28.462Z","reason":{},"promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:07:45.184Z","reason":{},"promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:07:59.645Z","reason":{},"promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:08:13.898Z","reason":{},"promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:08:23.898Z","reason":{},"promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:08:29.384Z","reason":{},"promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:08:39.109Z","reason":{},"promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:13:35.599Z","reason":{},"promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:15:42.776Z","reason":{},"promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:15:56.816Z","reason":{},"promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:16:03.072Z","reason":{},"promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:16:43.756Z","reason":{},"promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:16:53.187Z","reason":{},"promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:17:08.887Z","reason":"ReferenceError: asd is not defined\n    at init (/home/bhaskar/sociomata/sociomata-backend/index.js:139:5)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:17:20.520Z","reason":"ReferenceError: asd is not defined\n    at init (/home/bhaskar/sociomata/sociomata-backend/index.js:139:5)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:17:21.179Z","reason":"ReferenceError: asd is not defined\n    at init (/home/bhaskar/sociomata/sociomata-backend/index.js:139:5)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:18:11.682Z","reason":"ReferenceError: asd is not defined\n    at init (/home/bhaskar/sociomata/sociomata-backend/index.js:139:5)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","promise":{},"level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:18:29.268Z","reason":"ReferenceError: asd is not defined\n    at init (/home/bhaskar/sociomata/sociomata-backend/index.js:139:5)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:18:30.004Z","reason":"ReferenceError: asd is not defined\n    at init (/home/bhaskar/sociomata/sociomata-backend/index.js:139:5)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:18:40.873Z","error":"ReferenceError: asd is not defined\n    at init (/home/bhaskar/sociomata/sociomata-backend/index.js:139:5)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:18:41.550Z","error":"ReferenceError: asd is not defined\n    at init (/home/bhaskar/sociomata/sociomata-backend/index.js:139:5)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:27:59.163Z","error":"ReferenceError: asd is not defined\n    at init (/home/bhaskar/sociomata/sociomata-backend/index.js:139:5)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:36:19.983Z","error":"ReferenceError: asd is not defined\n    at init (/home/bhaskar/sociomata/sociomata-backend/index.js:139:5)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T07:37:09.876Z","error":"ReferenceError: asd is not defined\n    at init (/home/bhaskar/sociomata/sociomata-backend/index.js:139:5)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","message":"unhandledRejection"}
+{"path":"/test","level":"info","message":"Request log"}
+{"path":"/test","level":"info","message":"Request log"}
+{"path":"/test","level":"info","message":"Request log"}
+{"path":"/test","method":"get","level":"info","message":"Request log"}
+{"path":"/test","method":"get","level":"info","message":"Request log"}
+{"path":"/test","method":"get","level":"info","message":"Request log"}
+{"path":"/test","method":"get","statusCode":200,"level":"info","message":"Request log"}
+{"path":"/test","method":"get","userid":1,"statusCode":200,"level":"info","message":"Request log"}
+{"path":"/test","method":"get","timestamp":"2020-12-22T08:23:35.822Z","userid":1,"statusCode":200,"level":"info","message":"Request log"}
+{"path":"/test","method":"get","timestamp":"2020-12-22T08:23:48.206Z","userid":1,"statusCode":200,"level":"info","message":"Request log"}
+{"path":"/test","method":"get","timestamp":"2020-12-22T08:24:11.461Z","userid":1,"statusCode":200,"level":"info","message":"Request log"}
+{"path":"/test","method":"get","timestamp":"2020-12-22T08:24:40.884Z","userid":1,"statusCode":200,"level":"info","message":"Request log"}
+{"timestamp":"2020-12-22T08:26:29.258Z","error":"ReferenceError: asd is not defined\n    at init (/home/bhaskar/sociomata/sociomata-backend/index.js:144:5)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T08:27:18.579Z","error":"ReferenceError: asd is not defined\n    at init (/home/bhaskar/sociomata/sociomata-backend/index.js:144:5)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T08:27:32.158Z","error":"ReferenceError: asd is not defined\n    at init (/home/bhaskar/sociomata/sociomata-backend/index.js:144:5)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T08:27:56.776Z","error":"ReferenceError: asd is not defined\n    at init (/home/bhaskar/sociomata/sociomata-backend/index.js:144:5)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","message":"unhandledRejection"}
+{"timestamp":"2020-12-22T08:29:03.137Z","error":"ReferenceError: asd is not defined\n    at init (/home/bhaskar/sociomata/sociomata-backend/index.js:144:5)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","message":"unhandledRejection"}
+{"path":"/login","method":"post","timestamp":"2020-12-23T05:50:56.751Z","statusCode":200,"level":"info","message":"Request log"}
+{"path":"/login","method":"post","timestamp":"2020-12-23T05:54:08.400Z","statusCode":200,"level":"info","message":"Request log"}
+{"path":"/login","method":"post","timestamp":"2020-12-23T05:55:06.615Z","statusCode":200,"level":"info","message":"Request log"}
+{"path":"/login","method":"post","timestamp":"2020-12-23T06:05:17.490Z","statusCode":200,"level":"info","message":"Request log"}
+{"path":"/login","method":"post","timestamp":"2020-12-23T06:06:01.912Z","statusCode":200,"level":"info","message":"Request log"}
+{"path":"/login","method":"post","timestamp":"2020-12-23T06:06:41.001Z","statusCode":200,"level":"info","message":"Request log"}
+{"path":"/login","method":"post","timestamp":"2020-12-23T06:07:30.243Z","statusCode":200,"level":"info","message":"Request log"}
+{"path":"/login","method":"post","timestamp":"2020-12-23T06:08:14.564Z","statusCode":200,"level":"info","message":"Request log"}
+{"path":"/login","method":"post","timestamp":"2020-12-23T06:08:52.133Z","statusCode":200,"level":"info","message":"Request log"}
+{"path":"/login","method":"post","timestamp":"2020-12-23T06:09:06.398Z","statusCode":200,"level":"info","message":"Request log"}
+{"path":"/login","method":"post","timestamp":"2020-12-23T06:10:20.406Z","statusCode":200,"level":"info","message":"Request log"}
+{"path":"/test","method":"get","timestamp":"2020-12-23T06:12:17.314Z","statusCode":401,"level":"info","message":"Request log"}
+{"path":"/login","method":"post","timestamp":"2020-12-23T07:58:25.443Z","statusCode":200,"level":"info","message":"Request log"}
+{"path":"/signup","method":"post","timestamp":"2020-12-23T08:36:12.033Z","statusCode":200,"level":"info","message":"Request log"}
+{"path":"/signup","method":"post","timestamp":"2020-12-23T08:36:41.000Z","statusCode":200,"level":"info","message":"Request log"}
+{"timestamp":"2020-12-23T09:25:58.734Z","path":"/signup","error":"ReferenceError: asd is not defined\n    at handler (/home/bhaskar/sociomata/sociomata-backend/index.js:64:17)\n    at exports.Manager.execute (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/toolkit.js:57:29)\n    at Object.internals.handler (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/handler.js:46:48)\n    at exports.execute (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/handler.js:31:36)\n    at Request._lifecycle (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/request.js:370:68)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n    at async Request._execute (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/request.js:279:9)","level":"error","message":"createUser error"}
+{"path":"/signup","method":"post","timestamp":"2020-12-23T09:25:58.745Z","statusCode":500,"level":"info","message":"Request log"}
+{"timestamp":"2020-12-23T09:26:50.214Z","path":"/signup","error":"ReferenceError: asd is not defined\n    at handler (/home/bhaskar/sociomata/sociomata-backend/index.js:64:17)\n    at exports.Manager.execute (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/toolkit.js:57:29)\n    at Object.internals.handler (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/handler.js:46:48)\n    at exports.execute (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/handler.js:31:36)\n    at Request._lifecycle (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/request.js:370:68)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n    at async Request._execute (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/request.js:279:9)","level":"error","message":"createUser error"}
+{"path":"/signup","method":"post","timestamp":"2020-12-23T09:26:50.225Z","statusCode":500,"level":"info","message":"Request log"}
+{"timestamp":"2020-12-23T10:37:17.138Z","path":"/signup","error":"ReferenceError: asd is not defined\n    at handler (/home/bhaskar/sociomata/sociomata-backend/index.js:64:17)\n    at exports.Manager.execute (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/toolkit.js:57:29)\n    at Object.internals.handler (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/handler.js:46:48)\n    at exports.execute (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/handler.js:31:36)\n    at Request._lifecycle (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/request.js:370:68)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n    at async Request._execute (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/request.js:279:9)","level":"error","message":"createUser error"}
+{"path":"/signup","method":"post","timestamp":"2020-12-23T10:37:17.151Z","statusCode":500,"level":"info","message":"Request log"}
+{"path":"/login","method":"post","timestamp":"2020-12-23T10:49:54.634Z","statusCode":500,"level":"info","message":"Request log"}
+{"timestamp":"2020-12-23T10:50:32.382Z","path":"/login","error":"ReferenceError: asd is not defined\n    at handler (/home/bhaskar/sociomata/sociomata-backend/index.js:108:17)\n    at exports.Manager.execute (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/toolkit.js:57:29)\n    at Object.internals.handler (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/handler.js:46:48)\n    at exports.execute (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/handler.js:31:36)\n    at Request._lifecycle (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/request.js:370:68)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n    at async Request._execute (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/request.js:279:9)","level":"error","message":"login error"}
+{"path":"/login","method":"post","timestamp":"2020-12-23T10:50:32.395Z","statusCode":200,"level":"info","message":"Request log"}
+{"timestamp":"2020-12-23T10:51:18.839Z","path":"/login","error":"ReferenceError: asd is not defined\n    at handler (/home/bhaskar/sociomata/sociomata-backend/index.js:108:17)\n    at exports.Manager.execute (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/toolkit.js:57:29)\n    at Object.internals.handler (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/handler.js:46:48)\n    at exports.execute (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/handler.js:31:36)\n    at Request._lifecycle (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/request.js:370:68)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n    at async Request._execute (/home/bhaskar/sociomata/sociomata-backend/node_modules/@hapi/hapi/lib/request.js:279:9)","level":"error","message":"login error"}
+{"path":"/login","method":"post","timestamp":"2020-12-23T10:51:18.853Z","statusCode":500,"level":"info","message":"Request log"}

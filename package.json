@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "description": "Sociomata internal API server",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "jest -- unit"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/btofficiel/sociomata-backend.git"

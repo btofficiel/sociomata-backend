@@ -14,7 +14,7 @@ then
     echo TWITTER_APIKEY=$(aws ssm get-parameter --name sociomata-twitter_apikey --with-decryption --query Parameter.Value) >> .env
     echo TWITTER_SECRET=$(aws ssm get-parameter --name sociomata-twitter_secret --with-decryption --query Parameter.Value) >> .env
     echo TWITTER_PASSWORD=$(aws ssm get-parameter --name sociomata-staging-twitter_pass --with-decryption --query Parameter.Value) >> .env
-    echo LOG_DIRECTORY="../backend-logs" >> .env
+    echo LOG_DIRECTORY="/home/ubuntu/backend-logs" >> .env
     echo ENV=staging >> .env
     echo "Environment variables retrieved successfully"
 else

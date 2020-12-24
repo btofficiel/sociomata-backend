@@ -1,6 +1,7 @@
 'use strict';
+const path = require('path');
 
-require('dotenv').config()
+require('dotenv').config({ path: path.join(__dirname, '.env') });
 const Hapi = require('@hapi/hapi');
 const AuthJWT = require('hapi-auth-jwt2');
 const Joi = require('joi');

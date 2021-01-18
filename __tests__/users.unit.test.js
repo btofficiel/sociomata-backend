@@ -77,8 +77,8 @@ describe("Login", () => {
 
     let loginResult = await login(payload, db, bcrypt, user.check_user);
     expect(loginResult.status).toBe('fail');
-    expect(loginResult.statusCode).toEqual(200);
-    expect(loginResult.code).toBe('invalid_login_credentials');
+    expect(loginResult.statusCode).toEqual(409);
+    expect(loginResult.message).toBe('The email or password you have entered is invalid.');
   }); 
 
   test("returns status fail (user_not_exists) on incorrect email", async () => {
@@ -93,7 +93,7 @@ describe("Login", () => {
 
     let loginResult = await login(payload, db, bcrypt, user.check_user);
     expect(loginResult.status).toBe('fail');
-    expect(loginResult.statusCode).toEqual(200);
-    expect(loginResult.code).toBe('user_not_exists');
+    expect(loginResult.statusCode).toEqual(409);
+    expect(loginResult.message).toBe('No user found with the given email');
   }); 
 });

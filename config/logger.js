@@ -1,6 +1,15 @@
 const { createLogger, format, transports } = require('winston');
+const LEVEL = Symbol.for('level');
 
 const { combine, colorize } = format;
+
+const filterOnly = (level) => {
+  return format(function (info) {
+    if (info[LEVEL] === level) {
+      return info;
+    }
+  })();
+};
 
 const getColoredStatuCode = code => {
   switch(code){
@@ -50,9 +59,9 @@ let tport = [
         level: 'error' 
       }),
       new transports.File({ 
-        filename: `${process.env.LOG_DIRECTORY}/combined.log`, 
-        format: format.json(),
-        level: 'info'
+        filename: `${process.env.LOG_DIRECTORY}/request.log`, 
+        level: 'info',
+        format: filterOnly('info')
       })
 ];
 

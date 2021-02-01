@@ -164,7 +164,7 @@ describe("Posts", () => {
       }
     });
     
-    let result = await editPost(payload, 1, db, post.edit_post);
+    let result = await editPost(payload, 1, 1, db, post.edit_post);
 
     expect(api.createSuccessResponse).toHaveBeenCalledTimes(1);
     expect(db.one).toHaveBeenCalledTimes(1);

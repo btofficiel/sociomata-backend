@@ -67,7 +67,7 @@ const init = async () => {
         clientId: process.env.TWITTER_APIKEY,
         clientSecret: process.env.TWITTER_SECRET,
         isSecure: process.env.ENV === "prod",
-        location: "http://localhost/api"
+        location: `${process.env.ENV === "prod" ? "https" : "http" }://${process.env.HOST}/api`
     });
 
     server.route({

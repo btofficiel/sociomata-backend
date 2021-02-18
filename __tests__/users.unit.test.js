@@ -10,6 +10,7 @@ const jwt = {
 
 
 const db = {
+  one: jest.fn(),
   none: jest.fn(),
   any: jest.fn()
 }
@@ -32,9 +33,9 @@ describe("Signup", () => {
     expect(bcrypt.hash).toHaveBeenCalledTimes(1);
     expect(bcrypt.hash.mock.calls[0][0]).toEqual(payload.password);
     expect(bcrypt.hash.mock.calls[0][1]).toEqual('salt');
-    expect(db.none).toHaveBeenCalledTimes(1);
-    expect(db.none.mock.calls[0][0]).toEqual(user.create_user);
-    expect(db.none.mock.calls[0][1]).toEqual([payload.email, 'hash', 'salt']);
+    expect(db.one).toHaveBeenCalledTimes(1);
+    expect(db.one.mock.calls[0][0]).toEqual(user.create_user);
+    expect(db.one.mock.calls[0][1]).toEqual([payload.email, 'hash', 'salt']);
   });
 });
 

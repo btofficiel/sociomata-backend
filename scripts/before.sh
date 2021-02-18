@@ -1,8 +1,8 @@
 #!/bin/bash
 
 cd /home/ubuntu/backend
-rm -rf .env
-npm install
+sudo rm -rf .env
+sudo npm install
 if [ "$DEPLOYMENT_GROUP_NAME" == "Staging" ]
 then
     echo "Retrieving environment variables..."

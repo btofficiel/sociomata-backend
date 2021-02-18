@@ -17,11 +17,10 @@ const init = async () => {
 
     const server = Hapi.server({
         port: 3001,
-        host: 'localhost',
         routes: {
             validate: {
                 options: {
-                    abortEarly: false
+                    abortEarly: true
                 },
                 failAction: async (request, response, err) => {
                     throw Boom.badRequest(err.message);
@@ -79,6 +78,7 @@ const init = async () => {
         isSecure: process.env.ENV === "prod",
         location: `${process.env.ENV === "prod" ? "https" : "http" }://${process.env.ENV_HOST}/api`
     });
+
 
     server.route({
         method: '*',

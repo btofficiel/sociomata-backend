@@ -4,7 +4,7 @@ files:
   - source: /
     destination: /home/ubuntu/backend
 hooks:
-  BeforeInstall:
+  AfterInstall:
     - location: scripts/before.sh
       timeout: 300
       runas: root

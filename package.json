@@ -1,6 +1,6 @@
 {
   "name": "sociomata-backend",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Sociomata internal API server",
   "main": "index.js",
   "scripts": {
@@ -31,7 +31,7 @@
     "lodash": "^4.17.20",
     "nanoid": "^3.1.23",
     "node-fetch": "^2.6.1",
-    "pg-promise": "^10.8.1",
+    "pg-promise": "^10.11.0",
     "twit": "^2.2.11",
     "twitter-api-client": "^1.3.0",
     "winston": "^3.3.3"

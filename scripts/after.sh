@@ -25,6 +25,8 @@ then
     echo ENV=staging >> .env
     echo S3_BUCKET=sociomata-staging >> .env
     echo AWS_REGION=us-east-2 >> .env
+    echo AWS_SDK_LOAD_CONFIG="true" >> .env
+    echo AWS_PROFILE="assume-role-profile" >> .env
     echo "Environment variables retrieved successfully"
 else
     echo "Production not setup yet"

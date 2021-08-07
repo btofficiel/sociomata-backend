@@ -23,7 +23,7 @@ then
     echo PROJECT_DIRECTORY=/home/ubuntu/backend >> .env
     echo LOG_DIRECTORY="/home/ubuntu/backend-logs" >> .env
     echo ENV=staging >> .env
-    echo S3_BUCKET=sociomata-dev >> .env
+    echo S3_BUCKET=sociomata-staging >> .env
     echo AWS_DEFAULT_REGION=us-east-2 >> .env
     echo "Environment variables retrieved successfully"
 else

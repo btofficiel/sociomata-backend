@@ -28,6 +28,7 @@ const postBatch = async () => {
                 }
             };
 
+
             let result = await Promise.allSettled(batch.map(post=>fetch(`http://localhost/api/dispatch/twitter`, {
                 ...headers, 
                 body: JSON.stringify(post)

@@ -9,11 +9,14 @@ phases:
   pre_build:
     commands:
       - echo Installing dependencies...
-      - npm install
+      - npm install jest@27.0.6
   build:
     commands:
       - echo Testing...
+      - npm test
 artifacts:
   files:
     - "**/*"
   discard-paths: no
+  exclude-paths: 
+    - "node_modules"

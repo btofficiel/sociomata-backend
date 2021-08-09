@@ -6,7 +6,7 @@ const {
   createPost, 
   deletePost, 
   editPost,
-  fetchPosts,
+  fetchPostsQueue,
   createTwitterThread,
   editTwitterThread
 } = require('../lib/posts')
@@ -16,7 +16,10 @@ const db = {
   none: jest.fn(),
   any: jest.fn(),
   manyOrNone: jest.fn(),
-  one: jest.fn()
+  oneOrNone: jest.fn(),
+  one: jest.fn(),
+  batch: jest.fn(),
+  tx: jest.fn()
 };
 
 const successResponse = {
@@ -25,7 +28,7 @@ const successResponse = {
 };
 
 describe("Posts", () => {
-  test("createPost function works correctly", async () => {
+  test("createPost function works correctly | success case", async () => {
     let payload = {
       "timestamp": 1639829992,
       "recurring": true,
@@ -58,31 +61,87 @@ describe("Posts", () => {
         "status": 1
     };
 
+
     db.one.mockImplementationOnce(()=>{
       return Promise.resolve(response);
     });
 
+    db.oneOrNone.mockImplementationOnce(() => {
+      return true
+    });
+
     getUnixTime.mockReturnValue(1639829992);
+
     api.createSuccessResponse.mockReturnValue({
-      ...successResponse,
-      data: {
-        post: response
-      }
+      ...successResponse
     });
     
     let result = await createPost(payload, 1, db, post.create_post);
 
     expect(getUnixTime).toHaveBeenCalledTimes(1);
     expect(api.createSuccessResponse).toHaveBeenCalledTimes(1);
-    expect(db.one).toHaveBeenCalledTimes(1);
-    expect(db.one.mock.calls[0][0]).toEqual(post.create_post);
+    expect(db.oneOrNone).toHaveBeenCalledTimes(1);
+    expect(db.tx).toHaveBeenCalledTimes(1);
     expect(result.status).toBe('success');
     expect(result.statusCode).toEqual(200);
-    expect(result.data.post).toEqual(response);
     jest.clearAllMocks();
   });
 
-  test("fetchPosts fucntion works correctly", async () => {
+  test("createPost function works correctly | fail case", async () => {
+    let payload = {
+      "timestamp": 1639829992,
+      "recurring": true,
+      "description": "Hello World",
+      "category_id": null,
+      "tweets": [
+          {
+              "tweet": "Hello World",
+              "tweet_order": 1
+          },
+          {
+              "tweet": "My name is Bhaskar",
+              "tweet_order": 2 
+          },
+          {
+              "tweet": "Over!",
+              "tweet_order": 3
+          }
+      ]
+    };
+
+    let response = {
+        "id": 1,
+        "timestamp": 1639829940,
+        "recurring": true,
+        "description": "Hello World",
+        "category_id": null,
+        "user_id": 1,
+        "post_type": 1,
+        "status": 1
+    };
+
+
+
+    db.oneOrNone.mockImplementationOnce(() => {
+      return null;
+    });
+
+
+    api.createFailedResponse.mockReturnValue({
+      status: "fail",
+      statusCode: 409
+    });
+    
+    let result = await createPost(payload, 1, db, post.create_post);
+
+    expect(api.createFailedResponse).toHaveBeenCalledTimes(1);
+    expect(db.oneOrNone).toHaveBeenCalledTimes(1);
+    expect(result.status).toBe('fail');
+    expect(result.statusCode).toEqual(409);
+    jest.clearAllMocks();
+  });
+
+  test("fetchPostsQueue fucntion works correctly", async () => {
     let response = {
         "id": 1,
         "timestamp": 1639829940,
@@ -99,20 +158,17 @@ describe("Posts", () => {
     });
 
     api.createSuccessResponse.mockReturnValue({
-      ...successResponse,
-      data: {
-        posts: [response]
-      }
+      ...successResponse
     });
 
-    let result = await fetchPosts(1, db, post.fetch_posts);
+    let result = await fetchPostsQueue(1, db, {posts: post.fetch_posts});
 
     expect(api.createSuccessResponse).toHaveBeenCalledTimes(1);
+    expect(db.oneOrNone).toHaveBeenCalledTimes(1);
     expect(db.manyOrNone).toHaveBeenCalledTimes(1);
     expect(db.manyOrNone.mock.calls[0][0]).toEqual(post.fetch_posts);
     expect(result.status).toBe('success');
     expect(result.statusCode).toEqual(200);
-    expect(result.data.posts).toEqual([response]);
     jest.clearAllMocks();
   });
 
@@ -158,20 +214,15 @@ describe("Posts", () => {
     });
 
     api.createSuccessResponse.mockReturnValue({
-      ...successResponse,
-      data: {
-        post: response
-      }
+      ...successResponse
     });
     
-    let result = await editPost(payload, 1, 1, db, post.edit_post);
+    let result = await editPost(payload, 1, 1, db, {edit_post: post.edit_post});
 
     expect(api.createSuccessResponse).toHaveBeenCalledTimes(1);
-    expect(db.one).toHaveBeenCalledTimes(1);
-    expect(db.one.mock.calls[0][0]).toEqual(post.edit_post);
+    expect(db.tx).toHaveBeenCalledTimes(1);
     expect(result.status).toBe('success');
     expect(result.statusCode).toEqual(200);
-    expect(result.data.post).toEqual(response);
     jest.clearAllMocks();
   });
 
@@ -208,9 +259,12 @@ describe("Posts", () => {
           }
     ];
 
+
     await createTwitterThread(tweets, 1, db, twitter.create_thread);
 
-    expect(db.any).toHaveBeenCalledTimes(4);
+    expect(db.batch).toHaveBeenCalledTimes(1);
+    expect(db.batch.mock.calls[0][0].length).toEqual(4);
+    expect(db.none).toHaveBeenCalledTimes(4);
     jest.clearAllMocks();
   });
 
@@ -236,7 +290,9 @@ describe("Posts", () => {
 
     await editTwitterThread(tweets, 1, db, twitter.upsert_thread);
 
-    expect(db.any).toHaveBeenCalledTimes(4);
+    expect(db.batch).toHaveBeenCalledTimes(1);
+    expect(db.batch.mock.calls[0][0].length).toEqual(4);
+    expect(db.none).toHaveBeenCalledTimes(4);
     jest.clearAllMocks();
   });
 });

@@ -1,6 +1,6 @@
 {
   "name": "sociomata-backend",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Sociomata internal API server",
   "main": "index.js",
   "scripts": {
@@ -37,6 +37,6 @@
     "winston": "^3.3.3"
   },
   "devDependencies": {
-    "jest": "^26.6.3"
+    "jest": "^27.0.6"
   }
 }

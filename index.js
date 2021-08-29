@@ -29,6 +29,7 @@ const init = async () => {
         }       
     });
 
+
     const validate = async (decoded, request, h) => {
         try {
             const account = await client.any(user.check_user_byid, [decoded._id]);

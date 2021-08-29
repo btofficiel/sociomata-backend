@@ -7,6 +7,8 @@ const {
 
 const { twitterAuth } = require('../lib/sql');
 
+jest.useFakeTimers();
+
 const db = {
   none: jest.fn(),
   any: jest.fn(),

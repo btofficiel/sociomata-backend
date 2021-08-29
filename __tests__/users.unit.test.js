@@ -4,6 +4,8 @@ const JWT = require('jsonwebtoken');
 const { createUser, login, createAccessToken } = require('../lib/users')
 const { user } = require('../lib/sql');
 
+jest.useFakeTimers();
+
 const jwt = {
   sign: jest.fn().mockReturnValue('token')
 }

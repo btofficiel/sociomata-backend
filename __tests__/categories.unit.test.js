@@ -9,6 +9,8 @@ const {
 
 const { category } = require('../lib/sql');
 
+jest.useFakeTimers();
+
 const db = {
   none: jest.fn(),
   any: jest.fn(),

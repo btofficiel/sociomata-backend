@@ -1,7 +1,9 @@
 jest.mock('date-fns/getUnixTime');
 jest.mock('../lib/api');
+jest.mock('../lib/utils');
 const getUnixTime = require('date-fns/getUnixTime');
 const api = require('../lib/api');
+const utils = require('../lib/utils');
 const { 
   createPost, 
   deletePost, 
@@ -11,6 +13,12 @@ const {
   editTwitterThread
 } = require('../lib/posts')
 const { post, twitter } = require('../lib/sql');
+
+jest.setTimeout(10000);
+
+afterAll(done => {
+  setTimeout(done);
+});
 
 const db = {
   none: jest.fn(),
@@ -61,6 +69,7 @@ describe("Posts", () => {
         "status": 1
     };
 
+    utils.uploadMedia.mockReturnValue("");
 
     db.one.mockImplementationOnce(()=>{
       return Promise.resolve(response);
@@ -121,6 +130,7 @@ describe("Posts", () => {
     };
 
 
+    utils.uploadMedia.mockReturnValue("");
 
     db.oneOrNone.mockImplementationOnce(() => {
       return null;
@@ -160,6 +170,7 @@ describe("Posts", () => {
     api.createSuccessResponse.mockReturnValue({
       ...successResponse
     });
+
 
     let result = await fetchPostsQueue(1, db, {posts: post.fetch_posts});
 
@@ -209,6 +220,8 @@ describe("Posts", () => {
         "status": 1
     };
 
+    utils.uploadMedia.mockReturnValue("");
+
     db.one.mockImplementationOnce(()=>{
       return Promise.resolve(response);
     });
@@ -216,6 +229,7 @@ describe("Posts", () => {
     api.createSuccessResponse.mockReturnValue({
       ...successResponse
     });
+
     
     let result = await editPost(payload, 1, 1, db, {edit_post: post.edit_post});
 
@@ -295,4 +309,5 @@ describe("Posts", () => {
     expect(db.none).toHaveBeenCalledTimes(4);
     jest.clearAllMocks();
   });
+
 });

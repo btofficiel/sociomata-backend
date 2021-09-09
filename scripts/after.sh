@@ -39,7 +39,7 @@ else
     echo TWITTER_APIKEY=$(aws ssm get-parameter --name sociomata-twitter_apikey --with-decryption --query Parameter.Value) >> .env
     echo TWITTER_SECRET=$(aws ssm get-parameter --name sociomata-twitter_secret --with-decryption --query Parameter.Value) >> .env
     echo TWITTER_PASSWORD=$(aws ssm get-parameter --name prod-twitter_pass --with-decryption --query Parameter.Value) >> .env
-    echo TWITTER_DB_KEY=$(aws ssm get-parameter --name prod-twitter-dbkey --with-decryption --query Parameter.Value) >> .env
+    echo TWITTER_DB_KEY=$(aws ssm get-parameter --name prod-twitter_dbkey --with-decryption --query Parameter.Value) >> .env
     echo JWT_SECRET=$(aws ssm get-parameter --name prod-jwt_secret --with-decryption --query Parameter.Value) >> .env
     echo JWT_CRON_SECRET=$(aws ssm get-parameter --name prod-jwt_cron --with-decryption --query Parameter.Value) >> .env
     echo JWT_TEMP_SECRET=$(aws ssm get-parameter --name prod-jwt_temp --with-decryption --query Parameter.Value) >> .env

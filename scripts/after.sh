@@ -30,7 +30,7 @@ then
 else
     echo "Retrieving environment variables..."
     echo DB_HOST=$(aws ssm get-parameter --name prod-db_host --with-decryption --query Parameter.Value) >> .env
-    echo DB_USER=$(aws ssm get-parameter --name sociomata-staging-db_user --with-decryption --query Parameter.Value) >> .env
+    echo DB_USER=$(aws ssm get-parameter --name prod-db_user --with-decryption --query Parameter.Value) >> .env
     echo DB_PASS=$(aws ssm get-parameter --name sociomata-prod-db_pass --with-decryption --query Parameter.Value) >> .env
     echo DB_PORT=5432 >> .env
     echo DB_NAME=$(aws ssm get-parameter --name prod-db --with-decryption --query Parameter.Value) >> .env

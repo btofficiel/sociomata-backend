@@ -1,1 +1,1 @@
-sudo pm2 stop backend
+sudo pm2 delete backend --silent

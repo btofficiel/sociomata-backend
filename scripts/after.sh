@@ -6,6 +6,8 @@ sudo npm install
 if [ "$DEPLOYMENT_GROUP_NAME" == "Staging" ]
 then
     echo "Retrieving environment variables..."
+    echo AWS_PRESIGNED_ID=$(aws ssm get-parameter --name staging-presigned_id --with-decryption --query Parameter.Value) >> .env
+    echo AWS_PRESIGNED_KEY=$(aws ssm get-parameter --name staging-presigned_key --with-decryption --query Parameter.Value) >> .env
     echo DB_HOST=$(aws ssm get-parameter --name sociomata-staging-db_host --with-decryption --query Parameter.Value) >> .env
     echo DB_USER=$(aws ssm get-parameter --name sociomata-staging-db_user --with-decryption --query Parameter.Value) >> .env
     echo DB_PASS=$(aws ssm get-parameter --name sociomata-staging-db_pass --with-decryption --query Parameter.Value) >> .env

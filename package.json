@@ -1,6 +1,6 @@
 {
   "name": "sociomata-backend",
-  "version": "0.8.5",
+  "version": "0.9.2",
   "description": "Sociomata internal API server",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "@aws-sdk/client-s3": "^3.19.0",
     "@hapi/bell": "^12.1.1",
     "@hapi/boom": "^9.1.1",
-    "@hapi/hapi": "^20.0.3",
+    "@hapi/hapi": "^20.2.0",
     "aws-sdk": "^2.974.0",
     "bcrypt": "^5.0.0",
     "date-fns": "^2.16.1",

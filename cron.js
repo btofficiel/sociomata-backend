@@ -14,7 +14,7 @@ const postBatch = async () => {
     try {
         let raw_ts = Number(getUnixTime(new Date()));
         let ts = Math.floor(raw_ts/60)*60;
-        const query = 'SELECT id AS post_id, user_id FROM posts WHERE timestamp=$1';
+        const query = 'SELECT post_id, account_id FROM scheduled WHERE timestamp=$1';
         const posts = await client.manyOrNone(query, [ts]);
         let token = await api.createToken({ ts }, process.env.JWT_CRON_SECRET, { expiresIn: '5m' });
         const batches = _.chunk(posts, 50);

@@ -28,6 +28,8 @@ then
     echo S3_BUCKET=sociomata-staging >> .env
     echo AWS_REGION=us-east-2 >> .env
     echo AWS_SDK_LOAD_CONFIG="true" >> .env
+    echo STRIPE_SECRET=$(aws ssm get-parameter --name stripe-test --with-decryption --query Parameter.Value) >> .env
+    echo STRIPE_WEBHOOK=$(aws ssm get-parameter --name stripe-test_webhook --with-decryption --query Parameter.Value) >> .env
     echo "Environment variables retrieved successfully"
 else
     echo "Retrieving environment variables..."
@@ -55,4 +57,3 @@ else
     echo AWS_SDK_LOAD_CONFIG="true" >> .env
     echo "Environment variables retrieved successfully"
 fi
-

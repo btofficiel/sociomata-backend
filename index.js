@@ -32,9 +32,10 @@ const init = async () => {
 
     const validate = async (decoded, request, h) => {
         try {
-            const account = await client.any(user.check_user_byid, [decoded._id]);
-            if(account.length > 0) {
-                request.app._id = account[0].id;
+            const account = await client.oneOrNone(user.check_user_cred, [decoded._account, decoded._id]);
+            if(account) {
+                request.app._id = account.user_id;
+                request.app._account = account.account_id;
                 return { isValid: true }
             }
             else {

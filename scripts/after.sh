@@ -55,5 +55,7 @@ else
     echo S3_BUCKET=sociomata-prod >> .env
     echo AWS_REGION=us-east-2 >> .env
     echo AWS_SDK_LOAD_CONFIG="true" >> .env
+    echo STRIPE_SECRET=$(aws ssm get-parameter --name stripe-prod --with-decryption --query Parameter.Value) >> .env
+    echo STRIPE_WEBHOOK=$(aws ssm get-parameter --name stripe-prod_webhook --with-decryption --query Parameter.Value) >> .env
     echo "Environment variables retrieved successfully"
 fi

@@ -1,6 +1,6 @@
 {
   "name": "sociomata-backend",
-  "version": "0.10.2",
+  "version": "0.11.0",
   "description": "Sociomata internal API server",
   "main": "index.js",
   "scripts": {

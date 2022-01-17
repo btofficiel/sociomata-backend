@@ -6,6 +6,7 @@ const dbConfig = {
     database: process.env.DB_NAME,
     user: process.env.DB_USER,
     password: process.env.DB_PASS,
+    ssl: process.env.ENV !== "dev",
     allowExitOnIdle: true
 };
 

@@ -11,6 +11,7 @@ const client = require('./config/db');
 const { user } = require('./lib/sql.js');
 const api = require('./lib/api');
 const registerRoutes = require('./lib/routes');
+const { instagramProvider, facebookProvider } = require('./lib/providers');
 
 
 const init = async () => {
@@ -81,6 +82,15 @@ const init = async () => {
         location: `${process.env.ENV === "dev" ? "http" : "https" }://${process.env.ENV_HOST}/api`
     });
 
+    server.auth.strategy('instagram', 'bell', {
+        cookie: 'bell-instagram',
+        provider: instagramProvider(),
+        password: process.env.TWITTER_PASSWORD,
+        clientId: '1048992929327084',
+        clientSecret: '60d438142b7ff5db7dae5db89f45fc2d',
+        isSecure: true,
+        location: `https://${process.env.ENV === "dev" ? process.env.NGROK : process.env.ENV_HOST }/api`
+    });
 
     server.route({
         method: '*',

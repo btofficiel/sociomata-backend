@@ -30,6 +30,7 @@ then
     echo AWS_SDK_LOAD_CONFIG="true" >> .env
     echo STRIPE_SECRET=$(aws ssm get-parameter --name stripe-test --with-decryption --query Parameter.Value) >> .env
     echo STRIPE_WEBHOOK=$(aws ssm get-parameter --name stripe-test_webhook --with-decryption --query Parameter.Value) >> .env
+    echo POSTMARK_TOKEN=$(aws ssm get-parameter --name postmark --with-decryption --query Parameter.Value) >> .env
     echo "Environment variables retrieved successfully"
 else
     echo "Retrieving environment variables..."
@@ -57,5 +58,6 @@ else
     echo AWS_SDK_LOAD_CONFIG="true" >> .env
     echo STRIPE_SECRET=$(aws ssm get-parameter --name stripe-prod --with-decryption --query Parameter.Value) >> .env
     echo STRIPE_WEBHOOK=$(aws ssm get-parameter --name stripe-prod_webhook --with-decryption --query Parameter.Value) >> .env
+    echo POSTMARK_TOKEN=$(aws ssm get-parameter --name postmark --with-decryption --query Parameter.Value) >> .env
     echo "Environment variables retrieved successfully"
 fi
